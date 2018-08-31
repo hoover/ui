@@ -23,6 +23,8 @@
     "@zeit/next-sass": "^0.2.0",
     "classnames": "^2.2.5",
     "fast-deep-equal": "^2.0.1",
+    "highcharts": "^6.1.1",
+    "highcharts-react-official": "^1.4.0",
     "isomorphic-fetch": "^2.2.1",
     "jss": "^9.8.7",
     "langs": "^2.0.0",

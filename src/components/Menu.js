@@ -1,9 +1,8 @@
-import { Component, Fragment } from 'react';
-import cn from 'classnames';
-import { withRouter } from 'next/router';
-import api from '../api';
 import Button from '@material-ui/core/Button';
 import Link from 'next/link';
+import { withRouter } from 'next/router';
+import { Component, Fragment } from 'react';
+import api from '../api';
 
 class Menu extends Component {
     state = {
@@ -37,19 +36,10 @@ class Menu extends Component {
                 next: true,
             },
             {
-                name: 'about',
-                url: 'https://github.com/mgax/hoover',
-            },
-            {
-                name: 'terms',
-                url: '/terms',
+                name: 'insights',
+                url: '/insights',
                 next: true,
             },
-            // {
-            //     name: 'documentation',
-            //     url:
-            //         'https://dl.dropboxusercontent.com/u/103063/static/hoover/HooverDocumentaiton.pdf',
-            // },
             {
                 name: 'login',
                 url: urls.login,

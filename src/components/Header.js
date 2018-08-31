@@ -1,18 +1,11 @@
-import { Component } from 'react';
-import PropTypes from 'prop-types';
-import Menu from './Menu';
-import Link from 'next/link';
-
-import { withStyles } from '@material-ui/core/styles';
-
 import AppBar from '@material-ui/core/AppBar';
+import { withStyles } from '@material-ui/core/styles';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
-
-import ProgressIndicator from './ProgressIndicator';
+import Link from 'next/link';
+import PropTypes from 'prop-types';
+import { Component } from 'react';
+import Menu from './Menu';
 
 const styles = theme => ({
     root: {
@@ -60,18 +53,3 @@ class Header extends Component {
 }
 
 export default withStyles(styles)(Header);
-
-{
-    /*<nav className="navbar navbar-expand-md navbar-dark bg-dark">
-    <div className="container">
-        <Link href="/">
-            <a>
-                <span className="navbar-brand">hoover</span>
-            </a>
-        </Link>
-
-        <Menu />
-    </div>
-</nav>
-*/
-}
