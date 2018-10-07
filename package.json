@@ -38,6 +38,7 @@
     "qs": "^6.5.2",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
+    "react-finderjs": "^0.1.6",
     "react-hotkeys": "^1.1.4",
     "react-jss": "^8.6.1",
     "react-modal": "^3.4.5",

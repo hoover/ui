@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { fetchDoc, fetchServerDoc } from '../src/actions';
 import Document, { Meta } from '../src/components/Document';
 import Locations from '../src/components/Locations';
+import Finder from '../src/components/Finder';
 import SplitPaneLayout from '../src/components/SplitPaneLayout';
 import { parseLocation } from '../src/utils';
 
@@ -24,15 +25,16 @@ class Doc extends Component {
 
         const { data, url, collection } = this.props;
 
-        const left = data && <Locations data={data} url={url} />;
+        // const left = data && <Locations data={data} url={url} />;
+        const left = data && <Finder data={data} url={url} />;
         const right = data && <Meta doc={data} collection={collection} />;
 
         return (
             <SplitPaneLayout
                 left={left}
                 right={right}
-                defaultSizeLeft="25%"
-                defaultSizeMiddle="70%">
+                defaultSizeLeft="33%"
+                defaultSizeMiddle="66%">
                 <Document fullPage />
             </SplitPaneLayout>
         );
