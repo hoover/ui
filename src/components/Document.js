@@ -493,7 +493,7 @@ class DocumentFilesSection extends Component {
                     <TableCell>
                         {id ? (
                             <a
-                                href={url.resolve(baseUrl, id)}
+                                href={url.resolve(baseUrl, digest)}
                                 target={fullPage ? null : '_blank'}>
                                 {filename}
                             </a>
