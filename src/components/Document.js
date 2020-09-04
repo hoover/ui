@@ -473,15 +473,15 @@ class DocumentFilesSection extends Component {
     render() {
         const { data, baseUrl, title, fullPage, classes } = this.props;
 
-        const files = data.map(({ id, filename, content_type, size }, index) => {
+        const files = data.map(({ id, digest, filename, content_type, size }, index) => {
             return (
-                <TableRow key={id || filename}>
+                <TableRow key={id}>
                     <TableCell className="text-muted">{content_type}</TableCell>
                     <TableCell className="text-muted">{size}</TableCell>
                     <TableCell>
-                        {id ? (
+                        {id ? ( /* What does this check? */
                             <a
-                                href={url.resolve(baseUrl, `${id}/raw/${filename}`)}
+                                href={url.resolve(baseUrl, `${digest}/raw/${filename}`)}
                                 target={fullPage ? null : '_blank'}
                                 title="Original file">
                                 <IconCloudDownload />
