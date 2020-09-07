@@ -126,7 +126,7 @@ class Locations extends Component {
                                                             target="_blank"
                                                             href={url.resolve(
                                                                 baseUrl,
-                                                                `${child.id}/raw/${
+                                                                `${child.digest}/raw/${
                                                                     child.filename
                                                                 }`
                                                             )}>
