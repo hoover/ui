@@ -7,7 +7,7 @@ RUN groupadd -g $GID -o $UNAME
 RUN useradd -m -u $UID -g $GID -o -s /bin/bash $UNAME
 
 RUN mkdir -p /opt/hoover/ui
-chown -R 666:666 /opt/hoover/ui
+RUN chown -R 666:666 /opt/hoover/ui
 WORKDIR /opt/hoover/ui
 
 USER 666
