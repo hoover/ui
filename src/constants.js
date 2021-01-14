@@ -51,7 +51,7 @@ export const JSS_CSS = 'jss-server-side'
 export const HIGHLIGHT_SETTINGS = {
     fragment_size: 150,
     number_of_fragments: 3,
-    require_field_match: false,
+    require_field_match: true,
     pre_tags: ['<mark>'],
     post_tags: ['</mark>'],
 }
