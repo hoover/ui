@@ -4,6 +4,7 @@ import { Typography } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 import SplitPane from 'react-split-pane'
 import { useDocument } from './DocumentProvider'
+import { useTextSearch } from './TextSearchProvider'
 import Document  from './Document'
 import Locations from '../Locations'
 import Finder from '../Finder'
@@ -49,10 +50,8 @@ export default function DocPage() {
     const classes = useStyles()
     const whoAmI = useUser()
 
-    const {
-        data, loading, error, printMode,
-        digest, digestUrl, urlIsSha,
-    } = useDocument()
+    const { data, loading, error, printMode, digest, digestUrl, urlIsSha } = useDocument()
+    const { setSearchOpen } = useTextSearch()
 
     if (error) {
         return (
@@ -136,6 +135,19 @@ export default function DocPage() {
                 }
             },
         },
+        openSearchDocument: {
+            key: ['f', 'ctrl+f'],
+            help: 'Search in document preview',
+            handler: event => {
+                event.preventDefault()
+                setSearchOpen(true)
+            }
+        },
+        closeSearchDocument: {
+            key: 'esc',
+            help: 'Close document search',
+            handler: () => setSearchOpen(false)
+        }
     }
 
     return (
