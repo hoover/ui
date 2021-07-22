@@ -1,8 +1,20 @@
 import React from 'react'
-import { SvgIcon } from '@material-ui/core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-import { faBoxes } from '@fortawesome/free-solid-svg-icons'
+import {
+    faBoxes,
+    faEnvelope,
+    faFile,
+    faFileArchive,
+    faFileAudio,
+    faFileCode,
+    faFileExcel,
+    faFileImage,
+    faFilePdf,
+    faFileVideo,
+    faFileWord,
+    faFolder,
+} from '@fortawesome/free-solid-svg-icons'
 
 import {
     AccountTree,
@@ -38,6 +50,7 @@ import {
     LocalOfferOutlined,
     Lock,
     LockOpen,
+    MoreHoriz,
     PinDrop,
     Print,
     Room,
@@ -53,14 +66,6 @@ import {
     ZoomIn,
     ZoomOut,
 } from '@material-ui/icons'
-
-import folder, { ReactComponent as FolderIcon } from '../../icons/folder-line.svg'
-import archive, { ReactComponent as ArchiveIcon } from '../../icons/file-zip-line.svg'
-import email, { ReactComponent as EmailIcon } from '../../icons/mail-line.svg'
-import pdf, { ReactComponent as PdfIcon } from '../../icons/file-pdf-line.svg'
-import doc, { ReactComponent as DocIcon } from '../../icons/file-word-line.svg'
-import xls, { ReactComponent as XlsIcon } from '../../icons/file-excel-line.svg'
-import file, { ReactComponent as FileIcon } from '../../icons/file-line.svg'
 
 export const reactIcons = {
     categoryCollections:        <FontAwesomeIcon icon={faBoxes} size="lg" fixedWidth />,
@@ -115,24 +120,18 @@ export const reactIcons = {
     metaTab:                    <SettingsApplicationsOutlined />,
     codeTab:                    <CodeOutlined />,
     headersTab:                 <AccountTreeOutlined />,
+    moreFiles:                  <MoreHoriz />,
 
-    typeFolder:                 <SvgIcon component={ FolderIcon } />,
-    typeArchive:                <SvgIcon component={ ArchiveIcon } />,
-    typeEmail:                  <SvgIcon component={ EmailIcon } />,
-    typePdf:                    <SvgIcon component={ PdfIcon } />,
-    typeDoc:                    <SvgIcon component={ DocIcon } />,
-    typeXls:                    <SvgIcon component={ XlsIcon } />,
-    typeEmailArchive:           <SvgIcon component={ ArchiveIcon } />,
-    typeFile:                   <SvgIcon component={ FileIcon } />,
-}
-
-export const imageIcons = {
-    typeFolder:                 folder,
-    typeArchive:                archive,
-    typeEmail:                  email,
-    typePdf:                    pdf,
-    typeDoc:                    doc,
-    typeXls:                    xls,
-    typeEmailArchive:           archive,
-    typeFile:                   file,
+    typeArchive:                <FontAwesomeIcon icon={faFileArchive} size="lg" fixedWidth />,
+    typeAudio:                  <FontAwesomeIcon icon={faFileAudio} size="lg" fixedWidth />,
+    typeDoc:                    <FontAwesomeIcon icon={faFileWord} size="lg" fixedWidth />,
+    typeEmail:                  <FontAwesomeIcon icon={faEnvelope} size="lg" fixedWidth />,
+    typeEmailArchive:           <FontAwesomeIcon icon={faFileArchive} size="lg" fixedWidth />,
+    typeFile:                   <FontAwesomeIcon icon={faFile} size="lg" fixedWidth />,
+    typeFolder:                 <FontAwesomeIcon icon={faFolder} size="lg" fixedWidth />,
+    typeHtml:                   <FontAwesomeIcon icon={faFileCode} size="lg" fixedWidth />,
+    typeImage:                  <FontAwesomeIcon icon={faFileImage} size="lg" fixedWidth />,
+    typePdf:                    <FontAwesomeIcon icon={faFilePdf} size="lg" fixedWidth />,
+    typeVideo:                  <FontAwesomeIcon icon={faFileVideo} size="lg" fixedWidth />,
+    typeXls:                    <FontAwesomeIcon icon={faFileExcel} size="lg" fixedWidth />,
 }
